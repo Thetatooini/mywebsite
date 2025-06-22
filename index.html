@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>SODEPS - Société pétrolière</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1b263b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 15px;
+    }
+    nav button {
+      margin: 0 5px;
+      padding: 10px 20px;
+      background-color: #1b263b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 30px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #1b263b;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SODEPS</h1>
+    <p>Société de Développement et d'Exploitation du Permis du Sud</p>
+  </header>
+
+  <nav>
+    <button onclick="setLang('fr')">Français</button>
+    <button onclick="setLang('ar')">العربية</button>
+    <button onclick="setLang('en')">English</button>
+  </nav>
+
+  <!-- Français -->
+  <section id="fr" class="active">
+    <h2>À propos de SODEPS</h2>
+    <p>SODEPS, ou Société de Développement et d'Exploitation du Permis du Sud, est une entreprise tunisienne spécialisée dans l'exploration et la production pétrolière. Elle est un partenariat entre Eni (compagnie italienne d'hydrocarbures) et ETAP (Entreprise Tunisienne d'Activités Pétrolières). SODEPS met en production les concessions du Permis du Sud.</p>
+    <ul>
+      <li><strong>Activités:</strong> Recherche et exploitation pétrolière</li>
+      <li><strong>Partenariat:</strong> Collaboration entre Eni et ETAP</li>
+      <li><strong>Concession:</strong> Permis du Sud (sud de la Tunisie)</li>
+      <li><strong>Implantation:</strong> 10 Avenue Tahar Ben Achour, Tunis</li>
+      <li><strong>Historique:</strong> Fondée en 1983</li>
+    </ul>
+  </section>
+
+  <!-- العربية -->
+  <section id="ar" dir="rtl">
+    <h2>حول شركة SODEPS</h2>
+    <p>SODEPS، أو شركة تطوير واستغلال رخصة الجنوب، هي شركة تونسية متخصصة في التنقيب والإنتاج النفطي. وهي شراكة بين شركة Eni الإيطالية وشركة الأنشطة البترولية التونسية ETAP. تقوم SODEPS بتشغيل امتيازات رخصة الجنوب.</p>
+    <ul>
+      <li><strong>الأنشطة:</strong> البحث والاستغلال النفطي</li>
+      <li><strong>الشراكة:</strong> بين Eni وETAP بنسبة متساوية</li>
+      <li><strong>الامتياز:</strong> رخصة الجنوب جنوب تونس</li>
+      <li><strong>المقر:</strong> 10 شارع الطاهر بن عاشور، تونس</li>
+      <li><strong>التأسيس:</strong> سنة 1983</li>
+    </ul>
+  </section>
+
+  <!-- English -->
+  <section id="en">
+    <h2>About SODEPS</h2>
+    <p>SODEPS, or the South Permit Development and Exploitation Company, is a Tunisian firm specialized in oil exploration and production. It is a joint venture between Eni (an Italian oil company) and ETAP (Tunisian Company of Petroleum Activities). SODEPS operates the South Permit concessions.</p>
+    <ul>
+      <li><strong>Activities:</strong> Oil exploration and exploitation</li>
+      <li><strong>Partnership:</strong> Joint venture between Eni and ETAP</li>
+      <li><strong>Concession:</strong> South Permit, southern Tunisia</li>
+      <li><strong>Headquarters:</strong> 10 Avenue Tahar Ben Achour, Tunis</li>
+      <li><strong>Founded:</strong> In 1983</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SODEPS - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(lang).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
